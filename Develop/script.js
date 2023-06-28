@@ -31,7 +31,12 @@ function generatePassword() {
     charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
   
-  charset += "0123456789!@#$%^&*()_+`~{}[];:?<>/=-"
+//Prompt for special characters 
+  var includespecialchar = confirm("Include special characters?");
+
+  if (includespecialchar) {
+    charset += "0123456789!@#$%^&*()_+`~{}[];:?<>/=-";
+  }
 
   //Generate Password
   for (var i = 0; i < length; i++){
